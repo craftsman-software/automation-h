@@ -3,6 +3,8 @@ const browser = await chromium.launch({ headless: false }); // headless: false �
 const page = await browser.newPage();
 
 try {
+	// TODO: YAMLデータを読み込む
+
 	// ログインページにアクセス
 	await page.goto("https://c16e.v1.herp.cloud"); // 実際のURLに置き換えてください
 
@@ -29,6 +31,11 @@ try {
 	await page.waitForURL(/dashboard/, { timeout: 10000 }); // 必要に応じてURLを調整
 
 	console.log("ログイン成功！");
+
+	// TODO: https://c16e.v1.herp.cloud/ats/p/requisitions/add で新規職種を作成する
+
+
+	// TODO:  遷移先で保存ボタンを押す
 } catch (error) {
 	console.error("エラー:", error);
 } finally {
